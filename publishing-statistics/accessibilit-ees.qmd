@@ -1,0 +1,21 @@
+---
+title: "Accessibility considerations in EES"
+---
+
+<p class="text-muted">Guidance for how to make sure content is accessible in the Explore Education Statistics platform</p>
+
+---
+
+Explore Education Statistics (EES) is the Department’s official statistics dissemination platform, designed to make DfE’s published statistics and data easier to find, access, use and understand. We continually work to ensure that the service is as accessible as possible, however some elements of accessibility are directly related to the content produced in the platform, and this is where [better sentence here].
+
+For advice and support on accessibility in Explore Education Statistics (EES), please contact the [EES support mailbox](mailto:explore.statistics@education.gov.uk).
+
+---
+
+# Heading 1
+
+---
+
+Some text
+
+---

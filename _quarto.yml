@@ -45,6 +45,7 @@ website:
         contents: 
           - publishing-statistics/pub.qmd
           - publishing-statistics/ees.qmd
+          - publishing-statistics/accessibilit-ees.qmd
           - publishing-statistics/examples.qmd
           - publishing-statistics/dashboards.qmd
           - publishing-statistics/embedded-charts.qmd
