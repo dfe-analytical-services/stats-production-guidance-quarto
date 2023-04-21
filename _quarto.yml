@@ -37,8 +37,6 @@ website:
           - learning-development/git.qmd
       - section: "Creating statistics"
         contents: 
-          - creating-statistics/rap.qmd
-          - creating-statistics/rap-managers.qmd
           - creating-statistics/ud.qmd
           - creating-statistics/cd.qmd
       - section: "Publishing statistics"
@@ -52,12 +50,17 @@ website:
         contents: 
           - understanding-users/user-eng.qmd
           - understanding-users/user-analytics.qmd
+      - section: "Reproducible Analytical Pipelines (RAP)"
+        contents: 
+          - RAP/rap.qmd
+          - RAP/rap-managers.qmd
+          - RAP/rap-faq.qmd
 
 format:
   html:
     theme:
-      light: [cosmo, theme.scss] # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
-      dark: [cosmo, theme-dark.scss]
+      light: flatly # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
+      dark: darkly
     code-copy: true
     code-overflow: wrap
     toc: true
