@@ -1,12 +1,12 @@
 # .github/workflows/render-and-publish.yaml https://github.com/marketplace/actions/quarto-render
-name: Render and deploy Quarto files
+name: Render and push Quarto files to gh-pages
 on:
   push:
     branches:
       main
     
 jobs:
-  quarto-render-and-deploy:
+  quarto-render-and-push:
     runs-on: ubuntu-latest
     env:
       RENV_PATHS_ROOT: ~/.local/share/renv
