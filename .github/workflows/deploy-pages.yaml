@@ -29,10 +29,18 @@ jobs:
       - name: "Install Quarto and render"
         uses: pommevilla/quarto-render@main
 
-      - name: "Deploy to gh-pages"
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
+      - name: Render Quarto Project
+        run: |
+          quarto render --output-dir docs/
+      - name: Commit files  # transfer the new html files back into the repository
+        run: |
+          git config --local user.name  ${{ github.actor }}
+          git add ./docs
+          git commit -m "Updating the repository GitHub html pages in the docs folder"
+      - name: Push changes  
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          branch: gh-pages
+          force: true
           
