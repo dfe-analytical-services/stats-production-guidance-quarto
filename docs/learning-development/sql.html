@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Making sharable documents with Quarto - SQL</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../learning-development/r.html" rel="next">
+<link href="../learning-development/learning-development.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">SQL</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/duck_guidance.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://explore-education-statistics.service.gov.uk/" title="Explore Education Statistics" class="sidebar-tool px-1"><i class="bi bi-globe"></i></a>
+    <a href="https://github.com/dfe-analytical-services" title="DfE Analytical Services" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Welcome</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../learning-development/learning-development.html" class="sidebar-item-text sidebar-link">Learning and Development</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../learning-development/sql.html" class="sidebar-item-text sidebar-link active">SQL</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../learning-development/r.html" class="sidebar-item-text sidebar-link">R</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../learning-development/git.html" class="sidebar-item-text sidebar-link">Git</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Creating statistics</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../creating-statistics/rap.html" class="sidebar-item-text sidebar-link">RAP Guidance for Statistics Producers</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../creating-statistics/rap-managers.html" class="sidebar-item-text sidebar-link">RAP information for managers</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../creating-statistics/ud.html" class="sidebar-item-text sidebar-link">Open Data Standards</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../creating-statistics/cd.html" class="sidebar-item-text sidebar-link">Writing and visualising</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Publishing statistics</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../publishing-statistics/pub.html" class="sidebar-item-text sidebar-link">How to publish</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../publishing-statistics/ees.html" class="sidebar-item-text sidebar-link">Using Explore Education Statistics</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../publishing-statistics/examples.html" class="sidebar-item-text sidebar-link">EES - good practice examples</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../publishing-statistics/dashboards.html" class="sidebar-item-text sidebar-link">Best practice for publishing dashboards</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../publishing-statistics/embedded-charts.html" class="sidebar-item-text sidebar-link">Creating embedded visualisations</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">Understanding users</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../understanding-users/user-eng.html" class="sidebar-item-text sidebar-link">User engagement</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../understanding-users/user-analytics.html" class="sidebar-item-text sidebar-link">EES analytics</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-it" id="toc-what-is-it" class="nav-link active" data-scroll-target="#what-is-it">What is it</a></li>
+  <li><a href="#what-is-it-for" id="toc-what-is-it-for" class="nav-link" data-scroll-target="#what-is-it-for">What is it for</a></li>
+  <li><a href="#how-to-get-it" id="toc-how-to-get-it" class="nav-link" data-scroll-target="#how-to-get-it">How to get it</a></li>
+  <li><a href="#best-place-to-start" id="toc-best-place-to-start" class="nav-link" data-scroll-target="#best-place-to-start">Best place to start</a></li>
+  <li><a href="#best-practice" id="toc-best-practice" class="nav-link" data-scroll-target="#best-practice">Best practice</a></li>
+  <li><a href="#how-to-work-with-sql" id="toc-how-to-work-with-sql" class="nav-link" data-scroll-target="#how-to-work-with-sql">How to work with SQL</a></li>
+  <li><a href="#quick-reference-lookup" id="toc-quick-reference-lookup" class="nav-link" data-scroll-target="#quick-reference-lookup">Quick reference lookup</a></li>
+  <li><a href="#other-resources" id="toc-other-resources" class="nav-link" data-scroll-target="#other-resources">Other resources</a></li>
+  <li><a href="#tips-for-using-sql" id="toc-tips-for-using-sql" class="nav-link" data-scroll-target="#tips-for-using-sql">Tips for using SQL</a>
+  <ul class="collapse">
+  <li><a href="#setting-up-a-sql-area" id="toc-setting-up-a-sql-area" class="nav-link" data-scroll-target="#setting-up-a-sql-area">Setting up a SQL area</a></li>
+  <li><a href="#givinggetting-access" id="toc-givinggetting-access" class="nav-link" data-scroll-target="#givinggetting-access">Giving/getting access</a></li>
+  <li><a href="#moving-data-to-different-areas" id="toc-moving-data-to-different-areas" class="nav-link" data-scroll-target="#moving-data-to-different-areas">Moving data to different areas</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/dfe-analytical-services/stats-production-guidance-quarto/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">SQL</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p class="text-muted">
+Guidance and tips for accessing data via databases with SQL
+</p>
+<hr>
+<section id="what-is-it" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-it">What is it</h2>
+<hr>
+<p>SQL or Structured Query Language, is a programming language used to talk to relational database management systems.</p>
+<hr>
+</section>
+<section id="what-is-it-for" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-it-for">What is it for</h2>
+<hr>
+<p>SQL servers are where most of DfE’s data is held, making it ideal for database management.</p>
+<p>SQL provides us with a language primarily for querying databases to extract data, though it is also capable of some basic data processing and analysis.</p>
+<hr>
+</section>
+<section id="how-to-get-it" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-get-it">How to get it</h2>
+<hr>
+<p>Download SSMS from the DfE software center, talk to your team about getting access to the appropriate SQL servers and databases where the data you need to access is held and start writing SQL queries.</p>
+<p>There are usually a couple of different versions available for software on the software center, we’d recommend you always go for the latest (newest) version possible.</p>
+<!-- gif getting this from the software center -->
+<hr>
+</section>
+<section id="best-place-to-start" class="level2">
+<h2 class="anchored" data-anchor-id="best-place-to-start">Best place to start</h2>
+<hr>
+<p>Andy Brook’s excellent Introduction to SQL session, giving a visual overview of the basics of querying with SQL:</p>
+<div data-align="center">
+<iframe width="640" height="360" align="middle" src="https://web.microsoftstream.com/embed/video/2a42789f-5183-4a79-b159-ec4a46e530d7?autoplay=false&amp;showinfo=false" allowfullscreen="" style="border:none;">
+</iframe>
+</div>
+<hr>
+</section>
+<section id="best-practice" class="level2">
+<h2 class="anchored" data-anchor-id="best-practice">Best practice</h2>
+<hr>
+<p>Here are some tips to follow best practice in your SQL code, making it easier to read and pick up if another person is running your code. Following best practice guidance will help you to achieve RAP best practice with <a href="rap.html#Clean_final_code">clean final code</a></p>
+<ul>
+<li>Avoid any trailing whitespace</li>
+<li>Always capitalize SQL keywords (e.g., SELECT or AS)</li>
+<li>Variable names should be in snake case - lower case words separated by underscores (e.g.&nbsp;pupil_age instead of PupilAge)</li>
+<li>Comments should go near the top of your query, or at least near the closest SELECT</li>
+<li>Try to only comment on things that aren’t obvious about the query (e.g.&nbsp;why hardcoded filters are used, how to update them)</li>
+<li>Where possible, use <a href="https://www.essentialsql.com/introduction-common-table-expressions-ctes/" target="_blank" rel="noopener noreferrer">Common Table Expressions (CTEs)</a> early and often, and name them descriptively (e.g.&nbsp;“pupil_age_table” rather than “p”)</li>
+</ul>
+<hr>
+</section>
+<section id="how-to-work-with-sql" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-work-with-sql">How to work with SQL</h2>
+<hr>
+<p>SSMS is the best tool to get started with writing SQL queries and saving SQL scripts that produce your desired outputs.</p>
+<p>Once you have saved SQL scripts or are more familiar with writing SQL queries on the fly, you can look at running your scripts or lines of SQL code <a href="rap.html#Connecting_R_to_SQL">directly in R</a>. This will streamline your process, saving copying and pasting SQL outputs into csvs, and ultimately help with reaching RAP best practice by aiding production of <a href="rap.html#Single_publication_production_script">a single publication production script</a></p>
+<hr>
+</section>
+<section id="quick-reference-lookup" class="level2">
+<h2 class="anchored" data-anchor-id="quick-reference-lookup">Quick reference lookup</h2>
+<hr>
+<ul>
+<li><a href="https://www.w3schools.com/sql/default.asp" target="_blank" rel="noopener noreferrer">w3schools.com</a> offers a useful guide through the most common SQL commands.</li>
+</ul>
+<hr>
+</section>
+<section id="other-resources" class="level2">
+<h2 class="anchored" data-anchor-id="other-resources">Other resources</h2>
+<hr>
+<ul>
+<li><p>This <a href="https://github.com/TomFranklin/sql-applied-data-tidying/blob/master/data_tidying_l_and_d.sql" target="_blank" rel="noopener noreferrer">tutorial script</a> by Tom Franklin is a particularly good starting point as it includes the data you are manipulating, so you don’t need to worry about connecting to or getting access to specific databases before you can then run anything. Simply open up Microsoft SQL Server Management Studio and start playing with that query.</p></li>
+<li><p>Avision Ho created the this <a href="https://github.com/avisionh/Training-SQL" target="_blank" rel="noopener noreferrer">SQL training course</a>.</p></li>
+<li><p>The <a href="https://www.khanacademy.org/computing/computer-programming/sql" target="_blank" rel="noopener noreferrer">Khan academy</a> offers a great free introduction to the basics of SQL.</p></li>
+<li><p>It’s also worth taking a look at Jon Holman’s presentation on <a href="https://educationgovuk.sharepoint.com/sites/sarpi/g/WorkplaceDocuments/Forms/AllItems.aspx?RootFolder=%2Fsites%2Fsarpi%2Fg%2FWorkplaceDocuments%2FInducation%20learning%20and%20career%20development%2FCoffee%20and%20Coding%2F180321%5Fjonathan%5Fsql&amp;FolderCTID=0x012000C61C1076C17C5547A6D6D8C2A27B5D97" target="_blank" rel="noopener noreferrer">‘good to know’ SQL functions</a>.</p></li>
+<li><p>MoJ have produced a <a href="https://moj-analytical-services.github.io/SQL_from_square_one/CTEs.html" target="_blank" rel="noopener noreferrer">SQL from square one</a> guide to using CTE’s in SQL as well as running SQL from RStudio</p></li>
+</ul>
+<p>Andy’s follow up intermediate SQL session, covering more advanced features of SQL:</p>
+<div data-align="center">
+<iframe width="640" height="360" align="middle" src="https://web.microsoftstream.com/embed/video/0b96598e-1d4c-4c5e-807a-4efc264bc1cc?autoplay=false&amp;showinfo=false" allowfullscreen="" style="border:none;">
+</iframe>
+</div>
+<hr>
+</section>
+<section id="tips-for-using-sql" class="level2">
+<h2 class="anchored" data-anchor-id="tips-for-using-sql">Tips for using SQL</h2>
+<hr>
+<section id="setting-up-a-sql-area" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-a-sql-area">Setting up a SQL area</h3>
+<hr>
+<p>Before you set up a SQL database, make sure you have the following information to pass on:</p>
+<ul>
+<li>The name of the database you want to set up - Different servers will have different naming conventions, make sure to check this with the server owner before you confirm the name.</li>
+<li>Who the database owners should be - This will most likely be yourself, but you can have multiple (e.g.&nbsp;your team leader). It can be helpful to have more than one owner, so one can grant permissions when the other is unavailable.</li>
+<li>Who should have access, and what their access levels should be - Users can have read or read/write access. Make sure you have a list of users (with their AD names) and their access levels ready.</li>
+<li>The database structure - Do you need certain schemas setting up? This will help organise your database. Without schemas, all tables will be saved under [dbo].</li>
+</ul>
+<p>There are a few common servers that statistics producers make use of at DfE. Use the following contacts below to pass on the above information to get your new database set up:</p>
+<ul>
+<li>PDR (T1PRMDRSQL,55842) - contact the <a href="mailto:PupilData.REPOSITORY@education.gov.uk">PDR team</a></li>
+<li>PDB16 (3DCPRI-PDB16) - raise a request through the service desk under “non-standard” &gt; “any other request”</li>
+<li>Analyse &amp; Modelling server (T1PRANMSQL,60125) - raise a request on the service desk under the following options:</li>
+</ul>
+<div class="cell-output-display">
+<p><img src="../images/A_M_SQL.PNG" class="img-fluid"></p>
+</div>
+<hr>
+</section>
+<section id="givinggetting-access" class="level3">
+<h3 class="anchored" data-anchor-id="givinggetting-access">Giving/getting access</h3>
+<hr>
+<p>To gain access to a SQL database, you must have written confirmation from the database owner specifying whether your access is read-only or both read and write.</p>
+<p>If the area you require access to is in the <em>T1PRMDRSQL,55842</em> SQL server, contact the <a href="mailto:PupilData.REPOSITORY@education.gov.uk">PDR team</a> with your permission attached, stating the name of the database you want access to.</p>
+<p>If the area is in any other server, raise a request through the central IT service portal under “non-standard” &gt; “any other request”. In your request make sure you attach the written confirmation and specify:</p>
+<ul>
+<li>The server name</li>
+<li>The database name</li>
+<li>Whether it’s read or write access you need</li>
+</ul>
+<hr>
+</section>
+<section id="moving-data-to-different-areas" class="level3">
+<h3 class="anchored" data-anchor-id="moving-data-to-different-areas">Moving data to different areas</h3>
+<hr>
+<p>Information on how to do this in R can be found in our <a href="rap.html#Moving_data_to_different_areas">processes and RAP page</a></p>
+<hr>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../learning-development/learning-development.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Learning and Development</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../learning-development/r.html" class="pagination-link">
+        <span class="nav-page-text">R</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© CC-By DfE, 2023</div>   
+    <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
+
+
+
+</body></html>

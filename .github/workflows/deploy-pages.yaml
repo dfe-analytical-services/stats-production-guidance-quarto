@@ -1,25 +1,46 @@
-name: Build and Deploy
+# .github/workflows/render-and-publish.yaml https://github.com/marketplace/actions/quarto-render
+name: Render and deploy Quarto files
 on:
   push:
-    branches:
-      - main
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout️
-        uses: actions/checkout@v3 
-        
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-        
-      - name: Render Quarto Project
-        uses: quarto-dev/quarto-actions/render@v2
-        with:
-          to: html # If set, it will be equivalent to `quarto render --to html`
+  pull_request:
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+jobs:
+  quarto-render-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      RENV_PATHS_ROOT: ~/.local/share/renv
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Cache packages
+        uses: actions/cache@v1
         with:
-          branch: master
-          folder: .
+          path: ${{ env.RENV_PATHS_ROOT }}
+          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-renv-
+      
+      - name: Restore packages
+        shell: Rscript {0}
+        run: |
+          if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
+          renv::restore()
+
+      - name: "Install Quarto and render"
+        uses: pommevilla/quarto-render@main
+
+      - name: Render Quarto Project
+        run: |
+          quarto render --output-dir docs/
+      - name: Commit files  # transfer the new html files back into the repository
+        run: |
+          git config --local user.name  ${{ github.actor }}
+          git add .
+          git commit -m "Updating the repository GitHub html pages in the docs folder"
+      - name: Push changes  
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          force: true
+          
