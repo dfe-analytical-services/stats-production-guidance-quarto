@@ -1,32 +1,22 @@
-name: Render to docs folder
+# .github/workflows/render-and-publish.yaml https://github.com/marketplace/actions/quarto-render
+name: Render and deploy Quarto files
 on:
   push:
-    branches:
-      - main
+  pull_request:
+
 jobs:
-  build-and-deploy:
+  quarto-render-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout️
-        uses: actions/checkout@v3 
-        
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-        
-      - name: Publish to GitHub Pages (and render)
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
-          
-      - name: Commit files  # transfer the new html files back into the repository
-        run: |
-          git config --local user.name  ${{ github.actor }}
-          git add ./docs
-          git commit -m "Updating the repository GitHub html pages in the docs folder"
-          
-      - name: Push changes  
-        uses: ad-m/github-push-action@master
+      - uses: actions/checkout@v2
+
+      - name: "Install Quarto and render"
+        uses: pommevilla/quarto-render@main
+
+      - name: "Deploy to gh-pages"
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          force: true
+          publish_dir: ./docs
+          
