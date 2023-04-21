@@ -860,7 +860,7 @@ There are three statuses:
 
 
 <div class="alert alert-dismissible alert-warning">
-Only users with ‘approver’ permissions(#Roles_and_permissions) (usually G6 or above) can sign off the release for publication.
+Only users with [approver](#roles-and-permissions) permissions (usually G6 or above) can sign off the release for publication.
 </div>
 
 ---
