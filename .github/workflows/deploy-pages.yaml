@@ -14,12 +14,15 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
         
       - name: Render Quarto Project
-        uses: quarto-dev/quarto-actions/render@v2
+        run: |
+          quarto render --output-dir docs/
+      - name: Commit files  # transfer the new html files back into the repository
+        run: |
+          git config --local user.name  ${{ github.actor }}
+          git add ./docs
+          git commit -m "Updating the repository GitHub html pages in the docs folder"
+      - name: Push changes  
+        uses: ad-m/github-push-action@gh-pages
         with:
-          to: html # If set, it will be equivalent to `quarto render --to html`
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.0
-        with:
-          branch: master
-          folder: .
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
