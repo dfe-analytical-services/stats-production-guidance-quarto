@@ -10,9 +10,9 @@ Explore Education Statistics (EES) is the Department’s official statistics dis
 
 **The EES platform consists of two applications:**
 
-1. The [public](https://explore-education-statistics.service.gov.uk/) website, where users access stats
+1. The [public](https://explore-education-statistics.service.gov.uk/){target="_blank" rel="noopener noreferrer"} website, where users access stats
 
-2. The [admin](https://admin.explore-education-statistics.service.gov.uk/) website, where production teams create their stats
+2. The [admin](https://admin.explore-education-statistics.service.gov.uk/){target="_blank" rel="noopener noreferrer"} website, where production teams create their stats
 
 <div class="alert alert-dismissible alert-info">
 The majority of the admin side of EES is only supported in Google Chrome and Microsoft Edge and will not work correctly in Internet Explorer. The public website and pre-release previews of releases in admin can be viewed using Internet Explorer, though we still recommend that people use Chrome or Edge instead.
@@ -162,7 +162,7 @@ The hierarchy of content within EES is as follows -
 knitr::include_graphics("../images/ees-hierarchy.PNG")
 ```
 
-Publications are organised into topics and themes (as shown on the EES [Find Statistics page](https://explore-education-statistics.service.gov.uk/find-statistics)), and then within each publication there are releases - where the latest release includes the latest statistics for that publication. For example:
+Publications are organised into topics and themes (as shown on the EES [Find Statistics page](https://explore-education-statistics.service.gov.uk/find-statistics){target="_blank" rel="noopener noreferrer"}), and then within each publication there are releases - where the latest release includes the latest statistics for that publication. For example:
 
 | Level | Example |
 |:------|:------|
