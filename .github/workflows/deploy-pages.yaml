@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Render to docs folder
 on:
   push:
     branches:
@@ -13,14 +13,17 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         
-      - name: Render Quarto Project
-        run: |
-          quarto render --output-dir docs/
+      - name: Publish to GitHub Pages (and render)
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+          
       - name: Commit files  # transfer the new html files back into the repository
         run: |
           git config --local user.name  ${{ github.actor }}
           git add ./docs
           git commit -m "Updating the repository GitHub html pages in the docs folder"
+          
       - name: Push changes  
         uses: ad-m/github-push-action@master
         with:
