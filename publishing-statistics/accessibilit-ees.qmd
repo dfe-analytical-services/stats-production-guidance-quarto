@@ -1,21 +1,101 @@
 ---
-title: "Accessibility considerations in EES"
+title: "Accessibility in EES"
 ---
 
-<p class="text-muted">Guidance for how to make sure content is accessible in the Explore Education Statistics platform</p>
+<p class="text-muted">
 
----
+Guidance for how to make sure content is accessible in the Explore Education Statistics platform
 
-Explore Education Statistics (EES) is the Department’s official statistics dissemination platform, designed to make DfE’s published statistics and data easier to find, access, use and understand. We continually work to ensure that the service is as accessible as possible, however some elements of accessibility are directly related to the content produced in the platform, and this is where [better sentence here].
+</p>
 
-For advice and support on accessibility in Explore Education Statistics (EES), please contact the [EES support mailbox](mailto:explore.statistics@education.gov.uk).
+------------------------------------------------------------------------
 
----
+Explore Education Statistics (EES) is the Department's official statistics dissemination platform, designed to make DfE's published statistics and data easier to find, access, use and understand. We continually work to ensure that the service is as accessible as possible, however some elements of accessibility are directly related to the content produced in the platform, and this is where \[better sentence here\].
 
-# Heading 1
+To make suggestions for things to add to this page, or for any advice and support on accessibility in Explore Education Statistics (EES), please contact the [EES support mailbox](mailto:explore.statistics@education.gov.uk).
 
----
+------------------------------------------------------------------------
+
+# Creating visualisations
+
+------------------------------------------------------------------------
+
+Some intro text on visualistations, covers tables, charts, and images
+
+------------------------------------------------------------------------
+
+## How to choose a visualisation
+
+------------------------------------------------------------------------
 
 Some text
 
----
+------------------------------------------------------------------------
+
+## Alternative text
+
+------------------------------------------------------------------------
+
+Some text
+
+------------------------------------------------------------------------
+
+## Images
+
+------------------------------------------------------------------------
+
+Some text
+
+------------------------------------------------------------------------
+
+## Tables
+
+------------------------------------------------------------------------
+
+Some text
+
+------------------------------------------------------------------------
+
+# Written content
+
+------------------------------------------------------------------------
+
+How we write is often as important for accessibility as the publishing platform we use. Research shows that [higher literacy people prefer plain English](https://gds.blog.gov.uk/2014/02/17/guest-post-clarity-is-king-the-evidence-that-reveals-the-desperate-need-to-re-think-the-way-we-write/) because it allows them to understand the information as quickly as possible.
+
+
+We recommend you regularly review the written content you produce, if you'd like help with this, have a look at the publication scrums that we offer. These are a great opportunity
+
+To avoid confusion, technical terms are fine to use, and often are unavoidable, you just need to explain what they mean in plain English when you use them. Treat it as an opportunity to teach your users the terminology.
+
+For more detailed guidance on writing for Explore Education Statistics, have a look at [our writing and visulising guidance](cd.html), and the [GDS content design pages](https://www.gov.uk/guidance/content-design/writing-for-gov-uk){target="_blank" rel="noopener noreferrer"}.
+
+------------------------------------------------------------------------
+
+## Using headings
+
+------------------------------------------------------------------------
+
+Some text
+
+------------------------------------------------------------------------
+
+Some text
+
+------------------------------------------------------------------------
+
+## Hyperlinks
+
+------------------------------------------------------------------------
+
+Link text
+
+------------------------------------------------------------------------
+
+## Footnotes
+
+------------------------------------------------------------------------
+
+Just don't do them.
+
+------------------------------------------------------------------------
+
