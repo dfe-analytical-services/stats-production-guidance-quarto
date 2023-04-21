@@ -1,7 +1,7 @@
 ---
-title: "Statistics Production Guidance"
+title: "DfE Statistics Hub"
 date: "Last updated: `r Sys.Date()`"
-author: "By Cam Race, Laura Selby,<br> Sarah Wong, Richard Bielby,<br> Charlotte Foster and Tess Williams"
+author: "Cam Race, Laura Selby,<br> Sarah Wong, Richard Bielby,<br> Charlotte Foster and Tess Williams"
 site: "_site.yml"
 ---
 
