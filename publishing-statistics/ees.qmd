@@ -6,7 +6,7 @@ title: "Using Explore Education Statistics"
 
 ---
 
-Explore Education Statistics (EES) is the Department’s official statistics dissemination platform, designed to make DFE’s published statistics and data easier to find, access, use and understand.
+Explore Education Statistics (EES) is the Department’s official statistics dissemination platform, designed to make DfE’s published statistics and data easier to find, access, use and understand.
 
 **The EES platform consists of two applications:**
 
