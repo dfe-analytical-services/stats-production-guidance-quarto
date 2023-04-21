@@ -3,7 +3,7 @@ project:
   
 website: 
   page-navigation: true
-  title: "Making sharable documents with Quarto" 
+  title: "DfE Analytical Services - Statistics Production Guidance" 
   site-url: "https://dfe-analytical-services.github.io/stats-production-guidance-quarto/" 
   repo-url: https://github.com/dfe-analytical-services/stats-production-guidance-quarto 
   repo-actions: [issue]
