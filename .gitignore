@@ -5,7 +5,7 @@
 
 /.quarto/
 *_cache/
-_site/
+./_site/
 
 .DS_Store
 renv
