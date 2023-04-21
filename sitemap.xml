@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://dfe-analytical-services.github.io/stats-production-guidance-quarto/index.html</loc>
+    <lastmod>2023-04-12T09:57:27.540Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfe-analytical-services.github.io/stats-production-guidance-quarto/transition-from-rmarkdown.html</loc>
+    <lastmod>2023-04-12T09:57:28.880Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfe-analytical-services.github.io/stats-production-guidance-quarto/explore.html</loc>
+    <lastmod>2023-04-12T09:57:29.368Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfe-analytical-services.github.io/stats-production-guidance-quarto/learning-more.html</loc>
+    <lastmod>2023-04-12T09:57:29.716Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfe-analytical-services.github.io/stats-production-guidance-quarto/quarto-workflows/index.html</loc>
+    <lastmod>2023-04-12T09:57:30.140Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfe-analytical-services.github.io/stats-production-guidance-quarto/quarto-workflows/rstudio.html</loc>
+    <lastmod>2023-04-12T09:57:30.580Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfe-analytical-services.github.io/stats-production-guidance-quarto/quarto-workflows/jupyter.html</loc>
+    <lastmod>2023-04-12T09:57:31.072Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dfe-analytical-services.github.io/stats-production-guidance-quarto/quarto-workflows/browser.html</loc>
+    <lastmod>2023-04-12T09:57:31.436Z</lastmod>
+  </url>
+</urlset>

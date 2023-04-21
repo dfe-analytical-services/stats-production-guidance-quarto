@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="By Cam Race, Laura Selby,  Sarah Wong, Richard Bielby,  Charlotte Foster and Tess Williams">
-<meta name="dcterms.date" content="2023-04-21">
 
-<title>Making sharable documents with Quarto - Statistics Production Guidance</title>
+<title>Making sharable documents with Quarto - Creating embedded visualisations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./learning-development/learning-development.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../understanding-users/user-eng.html" rel="next">
+<link href="../publishing-statistics/dashboards.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Statistics Production Guidance</h1>
+      <h1 class="quarto-secondary-nav-title">Creating embedded visualisations</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -84,8 +83,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/duck_guidance.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/duck_guidance.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://explore-education-statistics.service.gov.uk/" title="Explore Education Statistics" class="sidebar-tool px-1"><i class="bi bi-globe"></i></a>
@@ -102,12 +101,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Welcome</a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Welcome</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./learning-development/learning-development.html" class="sidebar-item-text sidebar-link">Learning and Development</a>
+            <a href="../learning-development/learning-development.html" class="sidebar-item-text sidebar-link">Learning and Development</a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -115,17 +114,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./learning-development/sql.html" class="sidebar-item-text sidebar-link">SQL</a>
+  <a href="../learning-development/sql.html" class="sidebar-item-text sidebar-link">SQL</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./learning-development/r.html" class="sidebar-item-text sidebar-link">R</a>
+  <a href="../learning-development/r.html" class="sidebar-item-text sidebar-link">R</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./learning-development/git.html" class="sidebar-item-text sidebar-link">Git</a>
+  <a href="../learning-development/git.html" class="sidebar-item-text sidebar-link">Git</a>
   </div>
 </li>
       </ul>
@@ -140,57 +139,57 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./creating-statistics/rap.html" class="sidebar-item-text sidebar-link">RAP Guidance for Statistics Producers</a>
+  <a href="../creating-statistics/rap.html" class="sidebar-item-text sidebar-link">RAP Guidance for Statistics Producers</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./creating-statistics/rap-managers.html" class="sidebar-item-text sidebar-link">RAP information for managers</a>
+  <a href="../creating-statistics/rap-managers.html" class="sidebar-item-text sidebar-link">RAP information for managers</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./creating-statistics/ud.html" class="sidebar-item-text sidebar-link">Open Data Standards</a>
+  <a href="../creating-statistics/ud.html" class="sidebar-item-text sidebar-link">Open Data Standards</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./creating-statistics/cd.html" class="sidebar-item-text sidebar-link">Writing and visualising</a>
+  <a href="../creating-statistics/cd.html" class="sidebar-item-text sidebar-link">Writing and visualising</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Publishing statistics</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Publishing statistics</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./publishing-statistics/pub.html" class="sidebar-item-text sidebar-link">How to publish</a>
+  <a href="../publishing-statistics/pub.html" class="sidebar-item-text sidebar-link">How to publish</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./publishing-statistics/ees.html" class="sidebar-item-text sidebar-link">Using Explore Education Statistics</a>
+  <a href="../publishing-statistics/ees.html" class="sidebar-item-text sidebar-link">Using Explore Education Statistics</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./publishing-statistics/examples.html" class="sidebar-item-text sidebar-link">EES - good practice examples</a>
+  <a href="../publishing-statistics/examples.html" class="sidebar-item-text sidebar-link">EES - good practice examples</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./publishing-statistics/dashboards.html" class="sidebar-item-text sidebar-link">Best practice for publishing dashboards</a>
+  <a href="../publishing-statistics/dashboards.html" class="sidebar-item-text sidebar-link">Best practice for publishing dashboards</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./publishing-statistics/embedded-charts.html" class="sidebar-item-text sidebar-link">Creating embedded visualisations</a>
+  <a href="../publishing-statistics/embedded-charts.html" class="sidebar-item-text sidebar-link active">Creating embedded visualisations</a>
   </div>
 </li>
       </ul>
@@ -205,12 +204,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./understanding-users/user-eng.html" class="sidebar-item-text sidebar-link">User engagement</a>
+  <a href="../understanding-users/user-eng.html" class="sidebar-item-text sidebar-link">User engagement</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./understanding-users/user-analytics.html" class="sidebar-item-text sidebar-link">EES analytics</a>
+  <a href="../understanding-users/user-analytics.html" class="sidebar-item-text sidebar-link">EES analytics</a>
   </div>
 </li>
       </ul>
@@ -224,18 +223,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-and-development" id="toc-learning-and-development" class="nav-link active" data-scroll-target="#learning-and-development">Learning and development</a></li>
-  <li><a href="#creating-statistics" id="toc-creating-statistics" class="nav-link" data-scroll-target="#creating-statistics">Creating statistics</a></li>
-  <li><a href="#publishing-statistics" id="toc-publishing-statistics" class="nav-link" data-scroll-target="#publishing-statistics">Publishing statistics</a></li>
-  <li><a href="#understanding-users" id="toc-understanding-users" class="nav-link" data-scroll-target="#understanding-users">Understanding users</a></li>
-  <li><a href="#our-resources" id="toc-our-resources" class="nav-link" data-scroll-target="#our-resources">Our resources</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul class="collapse">
-  <li><a href="#dfe-qa-app" id="toc-dfe-qa-app" class="nav-link" data-scroll-target="#dfe-qa-app">DfE QA app</a></li>
-  <li><a href="#explore-education-statistics-analytics" id="toc-explore-education-statistics-analytics" class="nav-link" data-scroll-target="#explore-education-statistics-analytics">Explore Education Statistics Analytics</a></li>
-  <li><a href="#publication-self-assessment-tool" id="toc-publication-self-assessment-tool" class="nav-link" data-scroll-target="#publication-self-assessment-tool">Publication self-assessment tool</a></li>
-  <li><a href="#template-qa-code" id="toc-template-qa-code" class="nav-link" data-scroll-target="#template-qa-code">Template QA code</a></li>
-  <li><a href="#dfer-package" id="toc-dfer-package" class="nav-link" data-scroll-target="#dfer-package">dfeR package</a></li>
-  <li><a href="#this-guidance-website" id="toc-this-guidance-website" class="nav-link" data-scroll-target="#this-guidance-website">This guidance website</a></li>
+  <li><a href="#when-to-use-an-embedded-chart" id="toc-when-to-use-an-embedded-chart" class="nav-link" data-scroll-target="#when-to-use-an-embedded-chart">When to use an embedded chart</a></li>
+  <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a></li>
+  <li><a href="#review-and-authorisation" id="toc-review-and-authorisation" class="nav-link" data-scroll-target="#review-and-authorisation">Review and authorisation</a></li>
+  </ul></li>
+  <li><a href="#creating-an-embeddable-r-shiny-app" id="toc-creating-an-embeddable-r-shiny-app" class="nav-link" data-scroll-target="#creating-an-embeddable-r-shiny-app">Creating an embeddable R-Shiny App</a>
+  <ul class="collapse">
+  <li><a href="#the-dfe-tiny-shiny-template" id="toc-the-dfe-tiny-shiny-template" class="nav-link" data-scroll-target="#the-dfe-tiny-shiny-template">The DfE Tiny-Shiny template</a></li>
+  <li><a href="#whats-in-the-template" id="toc-whats-in-the-template" class="nav-link" data-scroll-target="#whats-in-the-template">What’s in the template</a></li>
+  <li><a href="#working-with-data" id="toc-working-with-data" class="nav-link" data-scroll-target="#working-with-data">Working with data</a></li>
+  </ul></li>
+  <li><a href="#development-requirements" id="toc-development-requirements" class="nav-link" data-scroll-target="#development-requirements">Development requirements</a>
+  <ul class="collapse">
+  <li><a href="#specific-design-recommendations-for-embedded-plots" id="toc-specific-design-recommendations-for-embedded-plots" class="nav-link" data-scroll-target="#specific-design-recommendations-for-embedded-plots">Specific design recommendations for embedded plots</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/dfe-analytical-services/stats-production-guidance-quarto/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -245,26 +247,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Statistics Production Guidance</h1>
+<h1 class="title d-none d-lg-block">Creating embedded visualisations</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>By Cam Race, Laura Selby,<br> Sarah Wong, Richard Bielby,<br> Charlotte Foster and Tess Williams </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 21, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -272,77 +262,106 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This website is a guide aimed at anyone producing official statistics in the Department for Education (DfE). It covers wider best practice and pulls together pieces of guidance that were previously standalone documents. If viewed in its entirety, it provides a walk-through guide from processing to publication, as well as being a single reference point that is easy to navigate if you just need to check on a specific part of the process, link off to other resources, or access specific guidance.</p>
-<p>There is already a wealth of resources out there, and therefore this site unashamedly aims to pool the relevant resources for statistics production into one place. There are some things that this site does not yet have, it will develop and change over time. We hope it can prove a useful resource for everyone from the most experienced of producers, right through to those who are working on their very first publication. If you have any feedback, suggested additions, or wish to challenge any of the guidance, please contact us using the envelope button in the top right corner.</p>
-<section id="learning-and-development" class="level2">
-<h2 class="anchored" data-anchor-id="learning-and-development">Learning and development</h2>
-<p><a href="learning-development/learning-development.html">General resources</a> - A collection of useful learning resources, and information on the recommended tools to get you started</p>
-<p><a href="learning-development/sql.html">SQL</a> - Guidance and tips for accessing data via databases with SQL</p>
-<p><a href="learning-development/r.html">R</a> - Guidance and tips for using the programming language R</p>
-<p><a href="learning-development/git.html">Git</a> - Guidance and tips for version control with Git</p>
-</section>
-<section id="creating-statistics" class="level2">
-<h2 class="anchored" data-anchor-id="creating-statistics">Creating statistics</h2>
-<p><a href="creating-statistics/rap.html">Processes and RAP</a> - Guidance for how to process data, including the principles of Reproducible Analytical Pipelines (RAP)</p>
-<p><a href="creating-statistics/rap_managers.html">RAP information for managers</a> - Guidance for those managing analysts and FAQs on RAP</p>
-<p><a href="creating-statistics/ud.html">Open data standards</a> - Guidance on how to structure data files</p>
-<p><a href="creating-statistics/cd.html">Writing and visualising</a> - Things to consider when writing statistical commentary</p>
-</section>
-<section id="publishing-statistics" class="level2">
-<h2 class="anchored" data-anchor-id="publishing-statistics">Publishing statistics</h2>
-<p><a href="publishing-statistics/pub.html">How to publish</a> - Guidance for how to publish different types of statistics</p>
-<p><a href="publishing-statistics/ees.html">Using EES</a> - Guidance for how to use the features in the Explore Education Statistics platform</p>
-<p><a href="publishing-statistics/examples.html">EES good practice examples</a> - Examples of good practice in EES across all of our publications</p>
-<p><a href="publishing-statistics/dashboards.html">Dashboards</a> - Guidance for publishing official statistics dashboards</p>
-<p><a href="publishing-statistics/embedded-charts.html">Creating embedded visualisations</a> - Guidance for creating and embedding R-Shiny charts in EES publications</p>
-</section>
-<section id="understanding-users" class="level2">
-<h2 class="anchored" data-anchor-id="understanding-users">Understanding users</h2>
-<p><a href="understanding-users/user-eng.html">User engagement</a> - Guidance on understanding and engaging with the users of published statistics</p>
-<p><a href="understanding-users/user_analytics.html">EES analytics</a> - Guidance on understanding how users are interacting with your statistics published via EES-</p>
-</section>
-<section id="our-resources" class="level2">
-<h2 class="anchored" data-anchor-id="our-resources">Our resources</h2>
-<p>We also have a number of other applications for statistics production teams to use to help them in their processes, they can be accessed at the links below when using a DfE device.</p>
-<section id="dfe-qa-app" class="level3">
-<h3 class="anchored" data-anchor-id="dfe-qa-app">DfE QA app</h3>
-<p>This application allows you to screen your data files against the underlying data standards for Official and National statistical publications. If your file passes the checks it also gives you some basic options for exploring the data in the file.</p>
+<p class="text-muted">
+Guidance for creating and embedding R-Shiny visualisations in EES publications
+</p>
+<hr>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<hr>
+<p>EES now offers the option to add an embedded block, which allows analysts to present custom R created charts within their publications. This necessitates analysts creating an R-Shiny based app on GitHub containing the required chart that can then be hosted on a shiny server (currently using the DfE’s account on shinyapps.io).</p>
+<p><strong>Note that this current combination of GitHub and ShinyApps for publishing Shiny Apps does not offer the appropriate security required for unpublished DfE data. Unpublished uderlying app data should therefore never be uploaded to GitHub/ShinyApps until such time as it has been published (i.e.&nbsp;via EES).</strong> Prior to publication, either dummy data or the already published data should be substituted in for the purposes of uploading to GitHub and deploying to ShinyApps.</p>
+<p>If you need a live version of the dashboard with the unpublished data for pre-release reviews and access, the following options are available:</p>
 <ul>
-<li><p><a href="https://rsconnect/rsc/dfe-published-data-qa/" target="_blank" rel="noopener noreferrer">https://rsconnect/rsc/dfe-published-data-qa/</a></p></li>
-<li><p>Code hosted at <a href="https://github.com/dfe-analytical-services/dfe-published-data-qa" target="_blank" rel="noopener noreferrer">https://github.com/dfe-analytical-services/dfe-published-data-qa</a></p></li>
+<li>Demo the chart in R-Studio</li>
+<li>Create a copy of the chart repository on Dev Ops, deploy this to rsconnect and use the rsconnect link as the embedded URL prior to publication (note this will need updating to the public ShinyApps link before the publication goes live).</li>
 </ul>
-</section>
-<section id="explore-education-statistics-analytics" class="level3">
-<h3 class="anchored" data-anchor-id="explore-education-statistics-analytics">Explore Education Statistics Analytics</h3>
-<p>This application provides access to the Google Analytics data for the Explore Education Statistics platform.</p>
+<p>We are currently putting in place a case to provide an in ternal shiny server platform, which will allow greater control of security around our data and allow draft Shiny applications to use unpublished data for internal use.</p>
+<hr>
+<section id="when-to-use-an-embedded-chart" class="level2">
+<h2 class="anchored" data-anchor-id="when-to-use-an-embedded-chart">When to use an embedded chart</h2>
+<hr>
+<p>EES provides a wide range of inbuilt chart options and will always be the first preference for static line, bar and geographical charts. This helps us to clearly maintain consistent styling and accessibility levels across the site.</p>
+<p>However, there are some instances where you might want to publish something that we can’t provide through EES. Example use cases would be:</p>
 <ul>
-<li><p><a href="https://rsconnect/rsc/ees-analytics/" target="_blank" rel="noopener noreferrer">https://rsconnect/rsc/ees-analytics/</a></p></li>
-<li><p>Code is not yet publicly available, contact us if you are interested in seeing it or contributing.</p></li>
+<li>interactive charts controlled by drop-down filters;</li>
+<li>chart types not provided by EES, e.g.&nbsp;sankey diagrams, box plots, waffle charts, pie charts, dumbbell charts, etc.</li>
 </ul>
+<hr>
 </section>
-<section id="publication-self-assessment-tool" class="level3">
-<h3 class="anchored" data-anchor-id="publication-self-assessment-tool">Publication self-assessment tool</h3>
-<p>A self assessment tool allowing teams to compare different aspects of their production processes against best practice.</p>
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools</h2>
+<hr>
+<p>We currently only support custom charts created using R-Shiny. These should be created with ggplot and plotly. We provide a template example of a demo R-Shiny/ggplot chart on the DfE Analytical Services GitHub site, which is described <a href="#the-dfe-tiny-shiny-template">below</a>.</p>
+<hr>
+</section>
+<section id="review-and-authorisation" class="level2">
+<h2 class="anchored" data-anchor-id="review-and-authorisation">Review and authorisation</h2>
+<hr>
+<p>To get a custom chart approved for embedding within a publication, you’ll need to get it reviewed by the <a href="mailto:statistics.development@education.gov.uk">Statistics Development team</a> (in addition to your standard approval chain).</p>
+<hr>
+</section>
+</section>
+<section id="creating-an-embeddable-r-shiny-app" class="level1">
+<h1>Creating an embeddable R-Shiny App</h1>
+<hr>
+<p>An embedded chart should take the form of a single chart, with necessary input options and nothing else. Avoid incorporating:</p>
 <ul>
-<li><p><a href="https://rsconnect/rsc/publication-self-assessment/" target="_blank" rel="noopener noreferrer">https://rsconnect/rsc/publication-self-assessment/</a></p></li>
-<li><p>Code mirrored at <a href="https://github.com/dfe-analytical-services/publication-self-assessment-copy" target="_blank" rel="noopener noreferrer">https://github.com/dfe-analytical-services/publication-self-assessment-copy</a></p></li>
+<li>multiple different charts</li>
+<li>using navigation elements</li>
+<li>images and logos</li>
 </ul>
+<p><strong>And definitely don’t include unpublished data in any app uploaded to GitHub/ShinyApps prior to publication.</strong></p>
+<p>Other elements such as tables may also be possible if there’s a clear use case for them that EES alone can’t meet. Get in touch with us if you want to check that what you’d like to include is compatible with the intended use of the embed block.</p>
+<hr>
+<section id="the-dfe-tiny-shiny-template" class="level2">
+<h2 class="anchored" data-anchor-id="the-dfe-tiny-shiny-template">The DfE Tiny-Shiny template</h2>
+<hr>
+<p>Our <a href="https://github.com/dfe-analytical-services/dfe-tiny-shiny">template tiny shiny app repository</a> should be used a starting point for all embedded shiny charts.</p>
+<p>To get an app set-up for use with EES, you’ll need the <a href="mailto:statistics.development@education.gov.uk">Statistics Development Team</a> team to create a repo for the app within the <a href="https://github.com/dfe-analytical-services/dfe-tiny-shiny">DfE Analytical Services area on GitHub</a>.</p>
+<hr>
 </section>
-<section id="template-qa-code" class="level3">
-<h3 class="anchored" data-anchor-id="template-qa-code">Template QA code</h3>
+<section id="whats-in-the-template" class="level2">
+<h2 class="anchored" data-anchor-id="whats-in-the-template">What’s in the template</h2>
+<hr>
+<p>The template provides code for some basic interactive plots. Each example plot is contained with one of the existing branches below for demonstration purposes:</p>
 <ul>
-<li>Template QA code <a href="https://github.com/dfe-analytical-services/automated-data-qa" target="_blank" rel="noopener noreferrer">https://github.com/dfe-analytical-services/automated-data-qa</a></li>
+<li>demo-interactive-bar</li>
+<li>demo-interactive-line</li>
 </ul>
+<hr>
 </section>
-<section id="dfer-package" class="level3">
-<h3 class="anchored" data-anchor-id="dfer-package">dfeR package</h3>
+<section id="working-with-data" class="level2">
+<h2 class="anchored" data-anchor-id="working-with-data">Working with data</h2>
+<hr>
+<p>As with the full dashboards, the embedded charts currently require the underlying data to be either included within the app repository on GitHub or uploaded elsewhere publicly accessible such as Google Drive or Dropbox. This currently means that any embedded charts being developed will need to use either dummy data or previously published data until the moment of publication. At the point of the parent release going live, the chart can then be updated with the latest data. Do not upload unpublished data to GitHub, Google Drive or Dropbox.</p>
+<p>As described earlier, where you need to use unpublished data in your chart prior to publication, you can either a) run the chart locally in R-Studio (without pushing the unpublished data to GitHub) or b) create a DevOps/rsconnect deploy of your app, which can be temporarily used as the embed block URL. Note, this will need updating to a URL to the public dashboard on ShinyApps ready for publication.</p>
+<p>We are currently developing a route to allow charts via R-Shiny apps to be hosted on DfE servers, such that draft publications will be able to incorporate embedded charts with the unpublished data. The data itself will then be accessed either from a SQL database on DfE servers.</p>
+<hr>
+</section>
+</section>
+<section id="development-requirements" class="level1">
+<h1>Development requirements</h1>
+<hr>
+<p>Many of the same principles that apply to creating a full R-Shiny dashboard apply to creating a custom embeddable charts. These are:</p>
 <ul>
-<li><a href="https://github.com/dfe-analytical-services/dfeR" target="_blank" rel="noopener noreferrer">https://github.com/dfe-analytical-services/dfeR</a></li>
+<li><a href="dashboards.html#accessibility-testing">Accessibility</a>;</li>
+<li><a href="dashboards.html#testing-r-shiny">Reliability</a>;</li>
+<li><a href="dashboards.html#performance-testing">Performance</a>;</li>
+<li><a href="dashboards.html#styling">Coherent styling</a>.</li>
 </ul>
-</section>
-<section id="this-guidance-website" class="level3">
-<h3 class="anchored" data-anchor-id="this-guidance-website">This guidance website</h3>
-<p>The code for this guidance website is mirrored at <a href="https://github.com/dfe-analytical-services/stats-production-guidance-copy" target="_blank" rel="noopener noreferrer">https://github.com/dfe-analytical-services/stats-production-guidance-copy</a></p>
+<hr>
+<section id="specific-design-recommendations-for-embedded-plots" class="level2">
+<h2 class="anchored" data-anchor-id="specific-design-recommendations-for-embedded-plots">Specific design recommendations for embedded plots</h2>
+<hr>
+<p>Example code for producing an embeddable shiny chart is given in the <a href="https://github.com/dfe-analytical-services/dfe-tiny-shiny/server.R">template tiny shiny app repository</a>. The following recommendations should be followed in adapting this code:</p>
+<ul>
+<li>Figures should be produced using plotly/ggplot2</li>
+<li>Figure lengths and heights should be in the range 6-10cm</li>
+<li>Text sizes in plots should be no smaller than 12pt</li>
+<li>Plotly overlays should be turned off</li>
+</ul>
+<p>Example code for creating charts using ggplot can be found in the <a href="ees.html#example-ggplot-chart-code">Using Explore Education Statistics guidance</a></p>
 
 
 </section>
@@ -599,10 +618,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../publishing-statistics/dashboards.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Best practice for publishing dashboards</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./learning-development/learning-development.html" class="pagination-link">
-        <span class="nav-page-text">Learning and Development</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../understanding-users/user-eng.html" class="pagination-link">
+        <span class="nav-page-text">User engagement</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
