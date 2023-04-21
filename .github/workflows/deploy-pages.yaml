@@ -2,8 +2,8 @@
 name: Render and deploy Quarto files
 on:
   push:
-  pull_request:
-
+    main
+    
 jobs:
   quarto-render-and-deploy:
     runs-on: ubuntu-latest
