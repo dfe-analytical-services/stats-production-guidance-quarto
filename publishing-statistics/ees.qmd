@@ -180,17 +180,17 @@ If you want to request a new publication, please be prepared to give the followi
 + The heading and subheading that you want the publication to sit under in our site (take a look at the current structure [here](https://explore-education-statistics.service.gov.uk/find-statistics){target="_blank" rel="noopener noreferrer"}), feel free to either use existing ones, or suggest new ones
 + The exact title of the publication
 + A summary of less than 160 characters (including spaces) that describes your publication series
-+ If the methodology already exists elsewhere and you have a URL for it, or if you want to [create one](#Methodology)
++ If the methodology already exists elsewhere and you have a URL for it, or if you want to [create one](#methodology)
 + Team name
 + Team email address
 + Lead statistician name
 + Lead statistician contact number
 + The [time period](ud.html#List_of_allowable_time_values) of the release you’re creating
 + Whether they are National statistics, an ad-hoc publication, or official statistics
-+ List of email addresses of analysts who need access to the release and at what [permission levels](#Roles_and_permissions)
++ List of email addresses of analysts who need access to the release and at what [permission levels](#roles-and-permissions)
 
 
-Publication details can be [managed by publication owners](#Publication_management) or via requests to the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk).
+Publication details can be [managed by publication owners](#managing-publications) or via requests to the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk).
 
 ---
 
@@ -232,7 +232,7 @@ If you have external users you'd like to request access for, please send the fol
 
 ---
 
-New releases can be [created by publication owners](#Create_new_release) or via requests to the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk). If you're requesting a new release via the mailbox, please give the following:
+New releases can be [created by publication owners](#create-new-release) or via requests to the [Explore Statistics Mailbox](mailto:explore.statistics@education.gov.uk). If you're requesting a new release via the mailbox, please give the following:
 
 + Name of the publication (including theme and topic that it sits under)
 + Time period for the release
@@ -860,7 +860,7 @@ There are three statuses:
 
 
 <div class="alert alert-dismissible alert-warning">
-Only users with ‘approver’ permissions(#Roles_and_permissions) (usually G6 or above) can sign off the release for publication.
+Only users with [approver](#roles-and-permissions) permissions (usually G6 or above) can sign off the release for publication.
 </div>
 
 ---
@@ -997,7 +997,7 @@ If you want to revise an existing methodology page you can amend the methodology
 
 `r knitr::include_graphics("../images/EES-amend-methodology.PNG")`
 
-Once you're happy with your amendment it just needs to be [approved](#Sign_off) in the usual way for it to be published.
+Once you're happy with your amendment it just needs to be [approved](#sign-off) in the usual way for it to be published.
 
 ---
 
