@@ -245,6 +245,36 @@ Much like setting up a SQL area, there are different ways to do this depending o
 
 ---
 
+## Standardised reference data
+
+---
+
+There will of course be cases where some of the data you use is reference data not owned by the DfE, or is available online for you to download rather than in an internal server. There are ways of incorporating this into a reproducible analytical pipeline nicely, sometimes you can even use links/URLs in your code that will always pull the latest data such that you will never need to change the link to reflect updates to the data!
+
+---
+
+### Raw files on GitHub
+
+---
+
+If you want to use reference data from GitHub, you can use the URL to the *raw* file. A common example of when you might want to use this would be to use **geographic lookup tables** that contain names and codes of different geographic levels for EES files (which are available in our [data screener repository](https://github.com/dfe-analytical-services/dfe-published-data-qa)). 
+
+If you find the data you're interested in within a repository, rather than copying, cloning or downloading the data, you should click the 'raw' button (see the below screenshot).
+
+`r knitr::include_graphics("../images/Github-raw-button.PNG")`
+
+This should take you to a new window which contains the raw data from the CSV file. Copy the URL from this page, as this is what we can use to pull the latest data into our code. 
+
+You can now use this URL as you would use a file path in a `read.csv()` query. For example;
+
+```
+devolved_area_lookup <- read.csv("https://raw.githubusercontent.com/dfe-analytical-services/dfe-published-data-qa/master/data/english_devolved_areas.csv")
+```
+
+The above code snippet will load in the data as it would with any other CSV, however the benefit is if that data file is updated on GitHub, when you run the code it will always pull the latest version. This is especially useful for look up tables and reference data, and is best RAP practice as it removed the need for any manual steps (like downloading, copying & pasting or manually updating the data/code)!
+
+---
+
 # Writing code
 
 ---
