@@ -261,7 +261,7 @@ If you want to use reference data from GitHub, you can use the URL to the *raw* 
 
 If you find the data you're interested in within a repository, rather than copying, cloning or downloading the data, you should click the 'raw' button (see the below screenshot).
 
-`r knitr::include_graphics("../images/Github-raw-button.PNG")`
+`r knitr::include_graphics("../images/Github-raw-button.png")`
 
 This should take you to a new window which contains the raw data from the CSV file. Copy the URL from this page, as this is what we can use to pull the latest data into our code. 
 
