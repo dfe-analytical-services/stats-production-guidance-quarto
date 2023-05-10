@@ -1192,4 +1192,4 @@ git clone YOUR_URL_HERE
 
 - Make use of git and version control in your team projects regularly. Like learning anything new, putting it into practice regularly is the best way to become confident in using it.  
 
-Please refer to the other links on the [learning resources](../learning-development/learning-development.html#git) page to learn more about how to use git in practice.
+Please refer to the other links on the [Git learning resources](../learning-development/git.html#other-resources) page to learn more about how to use git in practice.
