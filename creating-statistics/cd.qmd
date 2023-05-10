@@ -21,7 +21,7 @@ Migration to a new statistics dissemination platform - Explore Education Statist
 
 Teams should continually improve their publications, assessing against best practice using our [content checklist](#checklist).
 
-All of our publications should be designed around our users first and foremost, and you should consider this page in conjuction with any [user engagement](../understanding-users/user_eng.html) activities you are carrying out.
+All of our publications should be designed around our users first and foremost, and you should consider this page in conjuction with any [user engagement](../understanding-users/user-eng.html) activities you are carrying out.
 
 We are running publication scrums where teams can put forward their publication(s) for review by a group of volunteer analysts, providing feedback as ‘unfamiliar new readers’ to discuss ideas for further improvements. For more information, see the [publication scrums](#publication-scrums) section.
 
