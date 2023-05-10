@@ -9,7 +9,7 @@ title: "Learning and Development"
 
 As statistics producers we require a variety of tools to be able to process our data. Below are the recommended tools that will give us the most power to do what we need. These have large user communities in DfE, and are already working in our current IT setup.
 
-For best practice when using software and coding in our process, see our [guidance on RAP](rap.html){target="_blank" rel="noopener noreferrer"} the [DfE Good Code Practice guide](https://dfe-analytical-services.github.io/good-code-practice/index.html){target="_blank" rel="noopener noreferrer"}.
+For best practice when using software and coding in our process, see our [guidance on RAP](../RAP/rap.html){target="_blank" rel="noopener noreferrer"} the [DfE Good Code Practice guide](https://dfe-analytical-services.github.io/good-code-practice/index.html){target="_blank" rel="noopener noreferrer"}.
 
 
 ---
@@ -69,7 +69,7 @@ The time commitment of the programme will be dependent on the size of the work a
 
 ---
 
-For more information on how to use these tools in your production processes, please see the [processes and RAP](rap.html){target="_blank" rel="noopener noreferrer"} page.
+For more information on how to use these tools in your production processes, please see the [processes and RAP](../RAP/rap.html){target="_blank" rel="noopener noreferrer"} page.
 
 
 This is by no means a finite list of resources, we want this to be added to and for it to develop over time - if you have any resources that you think could be added then we'd love to [hear from you](mailto:statistics.development@education.gov.uk). 

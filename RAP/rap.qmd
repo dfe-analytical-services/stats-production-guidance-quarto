@@ -46,7 +46,7 @@ We want to focus on the parts of the production process that we have ownership a
 
 In Official Statistics production we are using RAP as a framework for best practice when producing our published data files, as these are the foundations of our publications moving forward. Following this framework will help us to improve and standardise our current production processes and provide a clear 'pipeline' for analysts to follow. This will have the added benefit of setting a clear and defined world of tools and skills required, making learning and development that much clearer and easier. To get started with RAP, we first need to be able to understand what it actually means in practice, and be able to [assess our own work against the principles of RAP](#what-is-expected).
 
-Implementing RAP for us will involve combining the use of SQL, R, and clear, consistent version control to increase efficiency and accuracy in our work. For more information on what these tools are, why we are using them, and resources to help up-skill in those areas, see our [learning resources](l+d.html) page.
+Implementing RAP for us will involve combining the use of SQL, R, and clear, consistent version control to increase efficiency and accuracy in our work. For more information on what these tools are, why we are using them, and resources to help up-skill in those areas, see our [learning resources](../learning-development/learning-development.html) page.
 
 The collection of, and routine checking of data as it is coming into the department is also an area that RAP can be applied to. We have kept this out of scope at the moment as the levels of control in this area vary wildly from team to team. If you would like advice and help to automate any particular processes, feel free to [contact us](mailto:statistics.development@education.gov.uk).
 
@@ -138,7 +138,7 @@ Measure your publication against the RAP levels using our [self assessment tool]
 
 Once you've assessed your publication, have a look through our guidance below to narrow down how you can get started with improving those parts of your process.
 
-The Statistics Development Team invites teams to take part in our partnership programme to develop their skills and implement RAP principles to a relevant project. Visit our page on  [getting started with the partnership programme](l+d.html#Support_available) for more details.
+The Statistics Development Team invites teams to take part in our partnership programme to develop their skills and implement RAP principles to a relevant project. Visit our page on  [getting started with the partnership programme](../learning-development/learning-development.html#Support_available) for more details.
 
 ---
 
@@ -175,7 +175,7 @@ SQL is a fantastic language for large scale data joining and manipulation; it al
 **How to get started**
 
 <!-- needs example -->
-For a collection of relevant resources to use when learning SQL, see our [learning resources](l+d.html) page, and for guidance on best practice when writing SQL queries, see the [writing code](#writing-code) and [documentation](#documentation) sections on this page, as well as the guides immediately below on how to setup and use a SQL database. 
+For a collection of relevant resources to use when learning SQL, see our [learning resources](../learning-development/learning-development.html) page, and for guidance on best practice when writing SQL queries, see the [writing code](#writing-code) and [documentation](#documentation) sections on this page, as well as the guides immediately below on how to setup and use a SQL database. 
 
 
 ---
@@ -184,7 +184,7 @@ For a collection of relevant resources to use when learning SQL, see our [learni
 
 ---
 
-There are a few different options, depending on where you want your new area to exist. Visit our [SQL learning page](sql.html#Setting_up_a_SQL_area) for details.
+There are a few different options, depending on where you want your new area to exist. Visit our [SQL learning page](../learning-development/sql.html#Setting_up_a_SQL_area) for details.
 
 ---
 
@@ -241,7 +241,7 @@ Remember that it is important to import them with consistent, thought-through [n
 
 ---
 
-Much like setting up a SQL area, there are different ways to do this depending on the server your database is in. Visit our [SQL learning page](sql.html#Givinggetting_access) for details.
+Much like setting up a SQL area, there are different ways to do this depending on the server your database is in. Visit our [SQL learning page](../learning-development/sql.html#Givinggetting_access) for details.
 
 ---
 
@@ -257,7 +257,7 @@ There will of course be cases where some of the data you use is reference data n
 
 ---
 
-If you want to use reference data from GitHub, you can use the URL to the *raw* file. A common example of when you might want to use this would be to use **geographic lookup tables** that contain names and codes of different geographic levels for EES files (which are available in our [data screener repository](https://github.com/dfe-analytical-services/dfe-published-data-qa)). 
+If you want to use reference data from GitHub, you can use the URL to the *raw* file. A common example of when you might want to use this would be to use **geographic lookup tables** that contain names and codes of different geographic levels for EES files (which are available in our [data screener repository](https://github.com/dfe-analytical-services/dfe-published-data-qa){target="_blank" rel="noopener noreferrer"}). 
 
 If you find the data you're interested in within a repository, rather than copying, cloning or downloading the data, you should click the 'raw' button (see the below screenshot).
 
@@ -304,7 +304,7 @@ Reliability is a huge benefit of the automation that RAP brings - when one of th
 
 **How to get started**
 
-See our [learning resources](l+d.html) for a wealth of resources on SQL and R to learn the skills required to translate your process into code. 
+See our [learning resources](../learning-development/learning-development.html) for a wealth of resources on SQL and R to learn the skills required to translate your process into code. 
 
 There are also two sections below with examples of tidying data in SQL and R to get you started.
 
@@ -350,7 +350,7 @@ processed_regional_data <- my_data %>%
 [Helpful new functions](https://towardsdatascience.com/five-tidyverse-tricks-you-may-not-know-about-c5026d5a19da){target="_blank" rel="noopener noreferrer"} in the tidyverse packages can help you to easily transform data from wide to long format (see tip 2 in the linked article for this, as it is often required for tidy data), as well as providing you with tools to allow you quickly and efficiently change the structure of your variables. 
 
 
-For further resources on learning R so that you're able to apply it to your everyday work, have a look at the [learning resources](l+d.html) page.
+For further resources on learning R so that you're able to apply it to your everyday work, have a look at the [learning resources](../learning-development/learning-development.html) page.
 
 ---
 
@@ -363,7 +363,7 @@ For further resources on learning R so that you're able to apply it to your ever
 
 **What does this mean?**
 
-Using the recommended tools on our [learning](l+d.html) page ([SQL](sql.html), [R](r.html) and [Git](git.html)), or other suitable alternatives that allow you to meet the [core principles](#core-principles). Ideally any tools used would be open source, Python is a good example of a tool that would also be well suited, though is less widely used in DfE and has a steeper learning curve than R.
+Using the recommended tools on our [learning](../learning-development/learning-development.html) page ([SQL](../learning-development/sql.html), [R](../learning-development/r.html) and [Git](../learning-development/git.html)), or other suitable alternatives that allow you to meet the [core principles](#core-principles). Ideally any tools used would be open source, Python is a good example of a tool that would also be well suited, though is less widely used in DfE and has a steeper learning curve than R.
 
 Open-source refers to something people can modify and share because its design is publicly accessible. For more information, take a look at this [explanation of open-source](https://opensource.com/resources/what-open-source){target="_blank" rel="noopener noreferrer"}, as well as this guide to [working in an open-source way](https://opensource.com/open-source-way){target="_blank" rel="noopener noreferrer"}. In practical terms, this means moving away from the likes of SPSS, SASS and Excel VBA, and utilising the likes of R or Python, version controlled with git, and hosted in a publicly accessible repository. 
 
@@ -380,7 +380,7 @@ There are many reasons why we have recommended the tools that we have, the recom
 
 **How to get started**
 
-Go to our [learning](l+d.html) page to read more about the recommended tools for the jobs we do, as well as looking at the resources available there for how to [build capability](l+d.html#general_resources) in them. Always feel free to contact us if you have any specific questions or would like help in understanding how to use those tools in your work.
+Go to our [learning](../learning-development/learning-development.html) page to read more about the recommended tools for the jobs we do, as well as looking at the resources available there for how to [build capability](../learning-development/learning-development.html#general_resources) in them. Always feel free to contact us if you have any specific questions or would like help in understanding how to use those tools in your work.
 
 By following [our guidance](#Version_controlled_final_code_scripts) in saving versions of code in an Azure DevOps, we will then be able to mirror those repositories in a publicly available GitHub area.
 
@@ -430,7 +430,7 @@ Having a script that documents the whole process for this saves time when needin
 
 Review your current process - how many file scripts does it take to get from source data to final output, why are they separated, and what order should they be run in? Do you still have manual steps that could introduce human error (for example, manually moving column orders around in excel)?
 
-You should automate any manual steps such as the example above. If it makes sense to, you could combine certain scripts to reduce the number. You can then write code in [R](r.html) to execute your scripts in order, so you are still only running one script to get the final output.
+You should automate any manual steps such as the example above. If it makes sense to, you could combine certain scripts to reduce the number. You can then write code in [R](../learning-development/r.html) to execute your scripts in order, so you are still only running one script to get the final output.
 
 ---
 
@@ -1020,7 +1020,7 @@ The [Self-assessment tool](https://github.com/dfe-analytical-services/publicatio
 
 If you do not already have git downloaded, you can [download the latest version from their website](https://git-scm.com/downloads).
 
-For now, take a look at at the [resources for learning Git](l+d.html#git) on the learning resources page.
+For now, take a look at at the [resources for learning Git](../learning-development/learning-development.html#git) on the learning resources page.
 
 ---
 
@@ -1090,7 +1090,7 @@ You should consider the following principles making an Official Statistics produ
 
 When naming your publication's repository you should use the publication name fully written out, in lower case, and with dashes for spaces – ‘graduate-labour-market-statistics’. 
 
-A single repository should be used for all releases of your publication, there's no need to have multiple as all the history is saved within previous commits. You can make use of [tagging releases in git](git.html#Tagging_release_versions) to help differentiate between each cycle.
+A single repository should be used for all releases of your publication, there's no need to have multiple as all the history is saved within previous commits. You can make use of [tagging releases in git](../learning-development/git.html#Tagging_release_versions) to help differentiate between each cycle.
 
 ---
 
@@ -1192,4 +1192,4 @@ git clone YOUR_URL_HERE
 
 - Make use of git and version control in your team projects regularly. Like learning anything new, putting it into practice regularly is the best way to become confident in using it.  
 
-Please refer to the other links on the [learning resources](l+d.html#git) page to learn more about how to use git in practice.
+Please refer to the other links on the [learning resources](../learning-development/learning-development.html#git) page to learn more about how to use git in practice.

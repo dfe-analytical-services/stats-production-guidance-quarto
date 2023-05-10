@@ -185,7 +185,7 @@ If you want to request a new publication, please be prepared to give the followi
 + Team email address
 + Lead statistician name
 + Lead statistician contact number
-+ The [time period](ud.html#List_of_allowable_time_values) of the release you’re creating
++ The [time period](../creating-statistics/ud.html#List_of_allowable_time_values) of the release you’re creating
 + Whether they are National statistics, an ad-hoc publication, or official statistics
 + List of email addresses of analysts who need access to the release and at what [permission levels](#roles-and-permissions)
 
@@ -236,7 +236,7 @@ New releases can be [created by publication owners](#create-new-release) or via 
 
 + Name of the publication (including theme and topic that it sits under)
 + Time period for the release
-+ [Time identifier](ud.html#List_of_allowable_time_values) for the release
++ [Time identifier](../creating-statistics/ud.html#List_of_allowable_time_values) for the release
 + Type of release (National, Official, Ad-hoc etc)
 
 Once you have created your release you will see enter the ‘create release dashboard, here you need to work through the following tabs to create your release:
@@ -642,7 +642,7 @@ Infographic alternatives should be .svg format and you can use the sizing option
 Accessibility matters for infographics too, consider the following if you do need to upload an image -
 
 * Keep them simple
-* Use colours that are available in EES - see our [visualisation guidance](cd.html#Charts-in-EES) for more details
+* Use colours that are available in EES - see our [visualisation guidance](../creating-statistics/cd.html#Charts-in-EES) for more details
 * Don't put borders around images
 * Read the [GSS guidance on the use of colour in visualisations](https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/) and follow the steps provided to check your visualisations
 * Try to avoid adding text to your images other than axis labels and limited annotations. Titles and headings can be added in the "chart configuration" tab instead
