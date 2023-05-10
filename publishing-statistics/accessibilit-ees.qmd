@@ -29,15 +29,11 @@ Some intro text on visualisations, covers tables, charts, and images...
 
 ## Using charts
 
----
-
 General intro to how they work in EES
 
 ---
 
 ## Choosing a chart
-
----
 
 Add in table, with links to guidance.
 
@@ -45,23 +41,17 @@ Add in table, with links to guidance.
 
 ## Line charts
 
----
-
 Label lines directly, avoid data point symbols
 
 ---
 
 ## Colour in charts
 
----
-
 A lot to go into here, but basically, do not rely on colour alone.
 
 ---
 
 ## Alternative text
-
----
 
 Definition
 
@@ -100,8 +90,6 @@ EES specific example handling duplication and pointing to text elsewhere.
 
 ## Images
 
----
-
 Where are images used in EES
 
 ---
@@ -125,8 +113,6 @@ More on why to avoid text and add example?
 ---
 
 ## Using tables
-
----
 
 Where you use them, how they differ from data blocks
 
@@ -166,7 +152,6 @@ Check caption and headers
 
 How we write is often as important for accessibility as the publishing platform we use. Research shows that [higher literacy people prefer plain English](https://gds.blog.gov.uk/2014/02/17/guest-post-clarity-is-king-the-evidence-that-reveals-the-desperate-need-to-re-think-the-way-we-write/) because it allows them to understand the information as quickly as possible.
 
-
 We recommend you regularly review the written content you produce, if you'd like help with this, have a look at the publication scrums that we offer. These are a great opportunity
 
 To avoid confusion, technical terms are fine to use, and often are unavoidable, you just need to explain what they mean in plain English when you use them. Treat it as an opportunity to teach your users the terminology.
@@ -176,8 +161,6 @@ For more detailed guidance on writing for Explore Education Statistics, have a l
 ---
 
 ## Using headings
-
----
 
 How to use them in EES
 
@@ -205,8 +188,6 @@ Make sure they're understandable out of context
 
 ## Whitespace
 
----
-
 Don't have blank headers for this
 
 Don't have excessive lines
@@ -216,8 +197,6 @@ Headers already give you enough space
 ---
 
 ## Footnotes
-
----
 
 Just don't do them.
 
@@ -232,8 +211,6 @@ Link text best practice
 ---
 
 ## Common pitfalls
-
----
 
 So many
 
