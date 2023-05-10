@@ -8,7 +8,7 @@ website:
   site-url: "https://dfe-analytical-services.github.io/stats-production-guidance-quarto/" 
   repo-url: https://github.com/dfe-analytical-services/stats-production-guidance-quarto 
   repo-actions: [issue]
-  
+
   page-footer:
     right: "This page is maintained by the Statistics Developlment Team"
     left: "Department for Education, 2023"
