@@ -51,7 +51,7 @@ This can be run on any data file, though requires the [EES metadata](#ees-metada
 
 For data to be used with the table tool and charts in EES, it needs to be provided to the following overall specifications:
 
-* The data hah the extension .csv.
+* The data should be contained in a [text file with comma separated values](#data-format) and with the extension .csv.
 * The first row of the data file should contain [machine readable column names](#variable-names) in [snake case](https://en.wikipedia.org/wiki/Snake_case){target="_blank" rel="noopener noreferrer"}.
 * The data should be layed out in line with [tidy data principles](#tidy-data-structure), consisting of filters (categories) and indicators (values).
 * The file should contain the [necessary mandatory columns](#time-and-geography) (i.e. time_period, time_identifier, geographical_level, country_code and country_name);
