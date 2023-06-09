@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Making sharable documents with Quarto - Git</title>
+<title>DfE Analytical Services - Statistics Production Guidance - Git</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../creating-statistics/rap.html" rel="next">
+<link href="../creating-statistics/ud.html" rel="next">
 <link href="../learning-development/r.html" rel="prev">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -41,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -61,6 +63,31 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KBJCBD114T"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KBJCBD114T', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
 
 
 </head>
@@ -139,16 +166,6 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../creating-statistics/rap.html" class="sidebar-item-text sidebar-link">RAP Guidance for Statistics Producers</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../creating-statistics/rap-managers.html" class="sidebar-item-text sidebar-link">RAP information for managers</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../creating-statistics/ud.html" class="sidebar-item-text sidebar-link">Open Data Standards</a>
   </div>
 </li>
@@ -210,6 +227,31 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../understanding-users/user-analytics.html" class="sidebar-item-text sidebar-link">EES analytics</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">Reproducible Analytical Pipelines (RAP)</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../RAP/rap.html" class="sidebar-item-text sidebar-link">RAP Guidance for Statistics Producers</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../RAP/rap-managers.html" class="sidebar-item-text sidebar-link">RAP information for managers</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../RAP/rap-faq.html" class="sidebar-item-text sidebar-link">RAP FAQs</a>
   </div>
 </li>
       </ul>
@@ -346,7 +388,7 @@ Guidance and tips for version control with Git
 <li><p>While also mentioned above as a resource for learning R, chapter 6 of ESFA’s <a href="https://rsconnect/rsc/esfa-r-training/git-building-intuition.html" target="_blank" rel="noopener noreferrer">guide to R and Git</a> is also worth looking at for Git alone.</p></li>
 <li><p>Microsoft have produced documentation on <a href="https://docs.microsoft.com/en-us/azure/devops/user-guide/code-with-git?view=azure-devops" target="_blank" rel="noopener noreferrer">using Git</a> within <a href="https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops" target="_blank" rel="noopener noreferrer">AzureDevOps</a>.</p></li>
 <li><p>For those wanting to go deeper into understand the variety of git commands and what they do, there is a great <a href="https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1" target="_blank" rel="noopener noreferrer">online visual resource</a>.</p></li>
-<li><p>We also have a number of helpful sections on using git in practice at the end of our <a href="rap.html#Build_capability_within_the_team" target="_blank" rel="noopener noreferrer">RAP page</a>.</p></li>
+<li><p>We also have a number of helpful sections on using git in practice at the end of our <a href="../RAP/rap.html#Build_capability_within_the_team">RAP page</a>.</p></li>
 </ul>
 <hr>
 </section>
@@ -817,8 +859,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../creating-statistics/rap.html" class="pagination-link">
-        <span class="nav-page-text">RAP Guidance for Statistics Producers</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../creating-statistics/ud.html" class="pagination-link">
+        <span class="nav-page-text">Open Data Standards</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -826,6 +868,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">© CC-By DfE, 2023</div>   
+      <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>

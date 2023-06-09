@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Making sharable documents with Quarto - Best practice for publishing dashboards</title>
+<title>DfE Analytical Services - Statistics Production Guidance - Best practice for publishing dashboards</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <link href="../publishing-statistics/embedded-charts.html" rel="next">
 <link href="../publishing-statistics/examples.html" rel="prev">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -41,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -61,6 +63,31 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KBJCBD114T"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KBJCBD114T', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
@@ -140,16 +167,6 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../creating-statistics/rap.html" class="sidebar-item-text sidebar-link">RAP Guidance for Statistics Producers</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../creating-statistics/rap-managers.html" class="sidebar-item-text sidebar-link">RAP information for managers</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../creating-statistics/ud.html" class="sidebar-item-text sidebar-link">Open Data Standards</a>
   </div>
 </li>
@@ -211,6 +228,31 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../understanding-users/user-analytics.html" class="sidebar-item-text sidebar-link">EES analytics</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">Reproducible Analytical Pipelines (RAP)</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../RAP/rap.html" class="sidebar-item-text sidebar-link">RAP Guidance for Statistics Producers</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../RAP/rap-managers.html" class="sidebar-item-text sidebar-link">RAP information for managers</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../RAP/rap-faq.html" class="sidebar-item-text sidebar-link">RAP FAQs</a>
   </div>
 </li>
       </ul>
@@ -515,7 +557,7 @@ TODO: Expanding on and giving templates for assessing performance
 <h1>R Shiny</h1>
 <hr>
 <p>Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage, embed them in <a href="http://rmarkdown.rstudio.com/">R Markdown documents</a> or build <a href="http://rstudio.github.io/shinydashboard/">dashboards</a>. You can also extend your Shiny apps with <a href="http://rstudio.github.io/shinythemes/">CSS themes</a>, <a href="http://www.htmlwidgets.org/">htmlwidgets</a>, and <a href="https://github.com/daattali/shinyjs/blob/master/README.md">JavaScript actions</a>.</p>
-<p>The guidance on this page assumes you have prior knowledge of R, if you are new to R, then take a look at our <a href="r.html">R resources page</a> to get started.</p>
+<p>The guidance on this page assumes you have prior knowledge of R, if you are new to R, then take a look at our <a href="../learning-development/r.html">R resources page</a> to get started.</p>
 <hr>
 <section id="how-to-start" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-start">How to start</h2>
@@ -635,9 +677,9 @@ ggplot(aes(y=value, x="",
       geom_bar(stat="identity", position = position_fill(reverse = TRUE))+
       scale_fill_manual(values = dfe_colours)
 </code></pre>
-<p>Further examples are given on the <a href="ees.html#example-ggplot-chart-code">Using Explore Education Statistics guidance</a> page.</p>
+<p>Further examples are given on the <a href="../publishing-statistics/ees.html#example-ggplot-chart-code">Using Explore Education Statistics guidance</a> page.</p>
 <p>You can use in-line CSS to make these style changes, or make edits to the style sheet. Editing the style sheet is a neater solution if you want to apply changes across your app, and keeps your UI code clean. You can find out how styles are configured by running your app, right clicking and selecting “Inspect” to view the element you wish to change. You can then find these lines in the CSS stylesheet and change a number of things including fonts, font colours and background colours.</p>
-<p>The <a href="https://department-for-education.shinyapps.io/la-school-places-scorecards">SCAP LA school places scorecards app</a> is one example of a public facing dashboard that meets these styling requirements.</p>
+<p>The <a href="https://department-for-education.shinyapps.io/la-school-places-scorecards" target="_blank" rel="noopener noreferrer">SCAP LA school places scorecards app</a> is one example of a public facing dashboard that meets these styling requirements.</p>
 <div class="cell-output-display">
 <p><img src="../images/styling.PNG" class="img-fluid"></p>
 </div>
@@ -647,7 +689,7 @@ ggplot(aes(y=value, x="",
 <h3 class="anchored" data-anchor-id="testing-r-shiny">Testing R Shiny</h3>
 <hr>
 <p>To ensure that they are reliable, dashboards should have an appropriate amount of automated tests before they can be published. We recommend using a mix of UI and unit tests, but the number and type of tests that you need to run will depend on the content of your application.</p>
-<p>Further guidance on setting up testing can be found in the <a href="https://dfe-analytical-services.github.io/good-code-practice/testing.html#testing-shiny-apps">DfE good code practice guide</a>. Also see our guidance on testing R code on the <a href="l+d.html#R">learning resources page</a>.</p>
+<p>Further guidance on setting up testing can be found in the <a href="https://dfe-analytical-services.github.io/good-code-practice/testing.html#testing-shiny-apps" target="_blank" rel="noopener noreferrer">DfE good code practice guide</a>. Also see our guidance on testing R code on the <a href="../learning-development/l+d.html#R">learning resources page</a>.</p>
 <hr>
 <section id="performance-testing" class="level4">
 <h4 class="anchored" data-anchor-id="performance-testing">Performance testing</h4>
@@ -742,7 +784,7 @@ CI
 <section id="secure-variables" class="level3">
 <h3 class="anchored" data-anchor-id="secure-variables">Secure variables</h3>
 <hr>
-<p>See our <a href="git.html#storing-secure-variables">Git</a> page for guidance on storing secure variables in repositories.</p>
+<p>See our <a href="../learning-development/git.html#storing-secure-variables">Git</a> page for guidance on storing secure variables in repositories.</p>
 <hr>
 <hr>
 </section>
@@ -1050,6 +1092,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">© CC-By DfE, 2023</div>   
+      <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>

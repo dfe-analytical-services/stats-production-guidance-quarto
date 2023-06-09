@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Making sharable documents with Quarto - Open Data Standards</title>
+<title>DfE Analytical Services - Statistics Production Guidance - Open Data Standards</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../creating-statistics/cd.html" rel="next">
-<link href="../creating-statistics/rap-managers.html" rel="prev">
+<link href="../learning-development/git.html" rel="prev">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -41,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -61,6 +63,31 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KBJCBD114T"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KBJCBD114T', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
 
 
 </head>
@@ -139,16 +166,6 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../creating-statistics/rap.html" class="sidebar-item-text sidebar-link">RAP Guidance for Statistics Producers</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../creating-statistics/rap-managers.html" class="sidebar-item-text sidebar-link">RAP information for managers</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../creating-statistics/ud.html" class="sidebar-item-text sidebar-link active">Open Data Standards</a>
   </div>
 </li>
@@ -210,6 +227,31 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../understanding-users/user-analytics.html" class="sidebar-item-text sidebar-link">EES analytics</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">Reproducible Analytical Pipelines (RAP)</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../RAP/rap.html" class="sidebar-item-text sidebar-link">RAP Guidance for Statistics Producers</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../RAP/rap-managers.html" class="sidebar-item-text sidebar-link">RAP information for managers</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../RAP/rap-faq.html" class="sidebar-item-text sidebar-link">RAP FAQs</a>
   </div>
 </li>
       </ul>
@@ -798,6 +840,9 @@ Guidance on how to structure data files
 <section id="optimising-filter-indicator-combinations" class="level3">
 <h3 class="anchored" data-anchor-id="optimising-filter-indicator-combinations">Optimising filter-indicator combinations</h3>
 <p>The policy of creating tidy data files effectively means optimising your filter-indicator combinations for use within the EES user interface. By doing so, end users will be better able to interact with your data and find the information that they’re looking for.</p>
+<p>The video below provides some context around this and shows how tidy data structures work better in the EES table tool when compared to wide (or pivoted) data sets.</p>
+<iframe width="853" height="480" src="https://web.microsoftstream.com/embed/video/fb2c32b2-7601-4698-9f9d-9d2b96c0a8f4?autoplay=false&amp;showinfo=true" allowfullscreen="" style="border:none;">
+</iframe>
 <p>The number of indicators should be kept to a minimum, whilst maintaining different types of measurements as distinct indicators. For example a wide structure might consist of something like the following:</p>
 <table class="table">
 <colgroup>
@@ -858,6 +903,12 @@ Guidance on how to structure data files
 </tbody>
 </table>
 <p>This is a simplified example and your data will likely be more complex, but in making this type of change, you may be able to better identify more optimal ways of organising your data. For example, if you find that restructuring like this creates a lot of empty cells, it may be that the data has incompatible filters and can be separated out into multiple data files.</p>
+<p>The next video illustrates the differences between wide and tidy data, showing examples of the same data organised in each structure.</p>
+<iframe width="853" height="480" src="https://web.microsoftstream.com/embed/video/c8f467db-31bb-4307-8d3b-11e5186c4049?autoplay=false&amp;showinfo=true" allowfullscreen="" style="border:none;">
+</iframe>
+<p>If your current processes produce wide data that you need to switch to a tidy structure, one of doing this is using the <code>pivot_longer()</code> function in R. The following video demonstrates how to do that using the data shown in the previous videos.</p>
+<iframe width="853" height="480" src="https://web.microsoftstream.com/embed/video/023ba23c-a7bf-4313-91c8-9dc2e14b1c8e?autoplay=false&amp;showinfo=true" allowfullscreen="" style="border:none;">
+</iframe>
 <hr>
 </section>
 </section>
@@ -1623,6 +1674,7 @@ Remember
 <p>We publish at a number of different geography breakdowns and these vary from publication to publication. Every publication in the new platform must include the three compulsory geography columns - geographic_level, country_code and country_name in its data files. These are compulsory as the data we are producing must lie within a country boundary.</p>
 <p>The geographic_level column should describe the level of data present in that row. Therefore data for a collection from a specific local authority would have ‘Local authority’ as the geographic_level, while a National aggregation would have ‘National’ as the geographic_level.</p>
 <p>Teams should make sure that they are regularly checking their geography codes if they are not using a lookup from a maintained database (such as in the PDR). ONS have the <a href="http://geoportal.statistics.gov.uk/" target="_blank" rel="noopener noreferrer">Open Geography portal</a>, which can be a useful way of checking these. There is a wealth of data on there, though Local authority boundaries can be hard to find, they can be found using the tabs at the top – Boundaries &gt; Administrative Boundaries &gt; Counties and Unitary Authorities.</p>
+<p>Teams can also use the lookup tables available via the <a href="https://github.com/dfe-analytical-services/dfe-published-data-qa/tree/master/data" target="_blank" rel="noopener noreferrer">data screener GitHub repository data folder</a>. Guidance on how to link directly to the latest data in your code can be seen in the <a href="../RAP/rap.html#Standardised_reference_data">standardised reference data section</a></p>
 <p>If you have data from an unknown location, the standard is to use ‘Not available’ as name, and ‘x’ as the code/s, this clearly marks that the geographical data for that row is unavailable, and does so in a consistent way with the wider GSS. If you have a unique variation of a certain location, e.g.&nbsp;‘Outside of England and unknown’, we may be able to add these in as exceptions. Locations like this would have a code of ‘z’ as no widely used code is applicable, please get in touch with us to discuss it further if you think this might apply to you.</p>
 <p>We expect that all geography codes will be based on the Open Geography Portal and run checks against this for various levels in the <a href="#How-to-check-against-these-standards">data screener</a>, please contact us if you have data that doesn’t match this.</p>
 <div class="alert alert-dismissible alert-info">
@@ -2817,8 +2869,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../creating-statistics/rap-managers.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">RAP information for managers</span>
+      <a href="../learning-development/git.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Git</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -2831,6 +2883,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">© CC-By DfE, 2023</div>   
+      <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Making sharable documents with Quarto - EES - good practice examples</title>
+<title>DfE Analytical Services - Statistics Production Guidance - EES - good practice examples</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <link href="../publishing-statistics/dashboards.html" rel="next">
 <link href="../publishing-statistics/ees.html" rel="prev">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -41,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -61,6 +63,31 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KBJCBD114T"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KBJCBD114T', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
 
 
 </head>
@@ -139,16 +166,6 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../creating-statistics/rap.html" class="sidebar-item-text sidebar-link">RAP Guidance for Statistics Producers</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../creating-statistics/rap-managers.html" class="sidebar-item-text sidebar-link">RAP information for managers</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../creating-statistics/ud.html" class="sidebar-item-text sidebar-link">Open Data Standards</a>
   </div>
 </li>
@@ -210,6 +227,31 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../understanding-users/user-analytics.html" class="sidebar-item-text sidebar-link">EES analytics</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">Reproducible Analytical Pipelines (RAP)</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../RAP/rap.html" class="sidebar-item-text sidebar-link">RAP Guidance for Statistics Producers</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../RAP/rap-managers.html" class="sidebar-item-text sidebar-link">RAP information for managers</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../RAP/rap-faq.html" class="sidebar-item-text sidebar-link">RAP FAQs</a>
   </div>
 </li>
       </ul>
@@ -289,7 +331,7 @@ Examples of good practice in EES, from file names to content
 <section id="file-names" class="level3">
 <h3 class="anchored" data-anchor-id="file-names">File names</h3>
 <hr>
-<p><a href="ud.html#File_names">Full guidance for naming files</a>.</p>
+<p><a href="../creating-statistics/ud.html#File_names">Full guidance for naming files</a>.</p>
 <p>The <a href="https://explore-education-statistics.service.gov.uk/find-statistics/education-and-training-statistics-for-the-uk">Education and training statistics for the UK</a> release has some good examples of file names which clearly explain what is in the file, while falling well under 35-50 characters in length, e.g.:</p>
 <ul>
 <li>uk_schools.csv</li>
@@ -399,12 +441,12 @@ Examples of good practice in EES, from file names to content
 <section id="content" class="level2">
 <h2 class="anchored" data-anchor-id="content">Content</h2>
 <hr>
-<p>Clear, concise content is required to direct your users to the right place, and keep them engaged with your release. Our <a href="cd.html">content guidance page</a> contains a raft of great advice on how to structure your release and write for the general public.</p>
+<p>Clear, concise content is required to direct your users to the right place, and keep them engaged with your release. Our <a href="../creating-statistics/cd.html">content guidance page</a> contains a raft of great advice on how to structure your release and write for the general public.</p>
 <hr>
 <section id="headlines" class="level3">
 <h3 class="anchored" data-anchor-id="headlines">Headlines</h3>
 <hr>
-<p><a href="cd.html#Headline_facts_and_figures">Full guidance on creating a headline section</a></p>
+<p><a href="../creating-statistics/cd.html#Headline_facts_and_figures">Full guidance on creating a headline section</a></p>
 <p>The <a href="https://explore-education-statistics.service.gov.uk/find-statistics/education-health-and-care-plans">Education, health and care plans</a> release has a good example of a headlines section. There are a sensible number of key statistics, and the summary below gives an overview of trends without diving into the numbers and overwhelming the user.</p>
 <div class="cell-output-display">
 <p><img src="../images/headlines_good.PNG" class="img-fluid"></p>
@@ -418,14 +460,14 @@ Examples of good practice in EES, from file names to content
 <section id="accordion-content" class="level3">
 <h3 class="anchored" data-anchor-id="accordion-content">Accordion content</h3>
 <hr>
-<p><a href="cd.html#Accordion_section_content">Full guidance on writing content for accordions</a></p>
+<p><a href="../creating-statistics/cd.html#Accordion_section_content">Full guidance on writing content for accordions</a></p>
 <p>The <a href="https://explore-education-statistics.service.gov.uk/find-statistics/parental-responsibility-measures">parental responsibility measures release</a> has good examples of writing for the public in accordion content. Content in each accordion is short and follows the “pyramid” principle of having essential information at the top, summarising the trend, then going into detail at the bottom.</p>
 <hr>
 </section>
 <section id="active-subheadings" class="level3">
 <h3 class="anchored" data-anchor-id="active-subheadings">Active subheadings</h3>
 <hr>
-<p><a href="cd.html#Active_headings_and_titles_-_content">Full guidance on using active headings and titles</a></p>
+<p><a href="../creating-statistics/cd.html#Active_headings_and_titles_-_content">Full guidance on using active headings and titles</a></p>
 <p>The <a href="https://explore-education-statistics.service.gov.uk/find-statistics/education-health-and-care-plans">EHCP</a> release has some great examples of active subheadings within accordions, which explain the overall trends without overloading users with detail.</p>
 <hr>
 </section>
@@ -738,6 +780,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">© CC-By DfE, 2023</div>   
+      <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>

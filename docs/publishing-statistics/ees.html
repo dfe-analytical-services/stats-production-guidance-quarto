@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Making sharable documents with Quarto - Using Explore Education Statistics</title>
+<title>DfE Analytical Services - Statistics Production Guidance - Using Explore Education Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <link href="../publishing-statistics/examples.html" rel="next">
 <link href="../publishing-statistics/pub.html" rel="prev">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -41,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -61,6 +63,31 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KBJCBD114T"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KBJCBD114T', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
 
 
 </head>
@@ -139,16 +166,6 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../creating-statistics/rap.html" class="sidebar-item-text sidebar-link">RAP Guidance for Statistics Producers</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../creating-statistics/rap-managers.html" class="sidebar-item-text sidebar-link">RAP information for managers</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../creating-statistics/ud.html" class="sidebar-item-text sidebar-link">Open Data Standards</a>
   </div>
 </li>
@@ -210,6 +227,31 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../understanding-users/user-analytics.html" class="sidebar-item-text sidebar-link">EES analytics</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">Reproducible Analytical Pipelines (RAP)</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../RAP/rap.html" class="sidebar-item-text sidebar-link">RAP Guidance for Statistics Producers</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../RAP/rap-managers.html" class="sidebar-item-text sidebar-link">RAP information for managers</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../RAP/rap-faq.html" class="sidebar-item-text sidebar-link">RAP FAQs</a>
   </div>
 </li>
       </ul>
@@ -477,16 +519,16 @@ Guidance for how to use the features in the Explore Education Statistics platfor
 <li>The heading and subheading that you want the publication to sit under in our site (take a look at the current structure <a href="https://explore-education-statistics.service.gov.uk/find-statistics" target="_blank" rel="noopener noreferrer">here</a>), feel free to either use existing ones, or suggest new ones</li>
 <li>The exact title of the publication</li>
 <li>A summary of less than 160 characters (including spaces) that describes your publication series</li>
-<li>If the methodology already exists elsewhere and you have a URL for it, or if you want to <a href="#Methodology">create one</a></li>
+<li>If the methodology already exists elsewhere and you have a URL for it, or if you want to <a href="#methodology">create one</a></li>
 <li>Team name</li>
 <li>Team email address</li>
 <li>Lead statistician name</li>
 <li>Lead statistician contact number</li>
-<li>The <a href="ud.html#List_of_allowable_time_values">time period</a> of the release you’re creating</li>
+<li>The <a href="../creating-statistics/ud.html#List_of_allowable_time_values">time period</a> of the release you’re creating</li>
 <li>Whether they are National statistics, an ad-hoc publication, or official statistics</li>
-<li>List of email addresses of analysts who need access to the release and at what <a href="#Roles_and_permissions">permission levels</a></li>
+<li>List of email addresses of analysts who need access to the release and at what <a href="#roles-and-permissions">permission levels</a></li>
 </ul>
-<p>Publication details can be <a href="#Publication_management">managed by publication owners</a> or via requests to the <a href="mailto:explore.statistics@education.gov.uk">Explore Statistics Mailbox</a>.</p>
+<p>Publication details can be <a href="#managing-publications">managed by publication owners</a> or via requests to the <a href="mailto:explore.statistics@education.gov.uk">Explore Statistics Mailbox</a>.</p>
 <hr>
 </section>
 <section id="admin-dashboard" class="level2">
@@ -519,11 +561,11 @@ Guidance for how to use the features in the Explore Education Statistics platfor
 <section id="creating-releases" class="level1">
 <h1>Creating releases</h1>
 <hr>
-<p>New releases can be <a href="#Create_new_release">created by publication owners</a> or via requests to the <a href="mailto:explore.statistics@education.gov.uk">Explore Statistics Mailbox</a>. If you’re requesting a new release via the mailbox, please give the following:</p>
+<p>New releases can be <a href="#create-new-release">created by publication owners</a> or via requests to the <a href="mailto:explore.statistics@education.gov.uk">Explore Statistics Mailbox</a>. If you’re requesting a new release via the mailbox, please give the following:</p>
 <ul>
 <li>Name of the publication (including theme and topic that it sits under)</li>
 <li>Time period for the release</li>
-<li><a href="ud.html#List_of_allowable_time_values">Time identifier</a> for the release</li>
+<li><a href="../creating-statistics/ud.html#List_of_allowable_time_values">Time identifier</a> for the release</li>
 <li>Type of release (National, Official, Ad-hoc etc)</li>
 </ul>
 <p>Once you have created your release you will see enter the ’create release dashboard, here you need to work through the following tabs to create your release:</p>
@@ -928,7 +970,7 @@ Guidance for how to use the features in the Explore Education Statistics platfor
 <p>Accessibility matters for infographics too, consider the following if you do need to upload an image -</p>
 <ul>
 <li>Keep them simple</li>
-<li>Use colours that are available in EES - see our <a href="cd.html#Charts-in-EES">visualisation guidance</a> for more details</li>
+<li>Use colours that are available in EES - see our <a href="../creating-statistics/cd.html#Charts-in-EES">visualisation guidance</a> for more details</li>
 <li>Don’t put borders around images</li>
 <li>Read the <a href="https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/">GSS guidance on the use of colour in visualisations</a> and follow the steps provided to check your visualisations</li>
 <li>Try to avoid adding text to your images other than axis labels and limited annotations. Titles and headings can be added in the “chart configuration” tab instead</li>
@@ -1133,7 +1175,7 @@ ggplot(data, aes(x=time_period, y=indicator1,  fill=Filter )) +
 <li><strong>Approved for publication</strong> (after approval has been given, releases in this status will be published on their scheduled date)</li>
 </ol>
 <div class="alert alert-dismissible alert-warning">
-<p>Only users with ‘approver’ permissions(#Roles_and_permissions) (usually G6 or above) can sign off the release for publication.</p>
+<p>Only users with <a href="#roles-and-permissions">approver</a> permissions (usually G6 or above) can sign off the release for publication.</p>
 </div>
 <hr>
 <section id="errors-and-warnings" class="level3">
@@ -1245,7 +1287,7 @@ EES PRA one pager
 <div class="cell-output-display">
 <p><img src="../images/EES-amend-methodology.PNG" class="img-fluid"></p>
 </div>
-<p>Once you’re happy with your amendment it just needs to be <a href="#Sign_off">approved</a> in the usual way for it to be published.</p>
+<p>Once you’re happy with your amendment it just needs to be <a href="#sign-off">approved</a> in the usual way for it to be published.</p>
 <hr>
 <section id="methodology-formatting" class="level2">
 <h2 class="anchored" data-anchor-id="methodology-formatting">Methodology formatting</h2>
@@ -1595,6 +1637,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">© CC-By DfE, 2023</div>   
+      <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
