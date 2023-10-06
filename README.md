@@ -1,3 +1,8 @@
+
+# **This site is no longer being maintained.**
+
+---
+
 # DfE Statistics Production Guidance
 
 ## Introduction
@@ -8,9 +13,7 @@ An rmarkdown website used as a central place to hold guidance, helpful links and
 
 ## Hosted environments
 
-The guidance is publicly at:
-
-https://dfe-analytical-services.github.io/stats-production-guidance-quarto/
+This site is no longer hosted anywhere.
 
 ---
 
